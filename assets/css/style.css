@@ -78,8 +78,9 @@ h1, h2, h3, h4, h5, h6 {
   height: 100px;
   z-index: 997;
   transition: all 0.5s;
-  background: #141823;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+  /* background: #141823; */
+  background: transparent;
+  /* box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3); */
 }
 
 #header.header-scrolled {
@@ -119,6 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 */
 .navbar {
   padding: 0;
+  /* background: transparent !important; */
 }
 
 .navbar ul {
@@ -140,7 +142,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 0 10px 30px;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
-  color: #004289;
+  color: #6a5ddb;
   font-weight: 500;
   white-space: nowrap;
   transition: 0.3s;
@@ -153,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar a:hover, .navbar .active, .navbar li:hover > a {
-  color: #007bff;
+  color: #b182ef;
 }
 
 .navbar .dropdown ul {
@@ -320,20 +322,39 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
+  height: 100vh;
   position: relative;
   background: url("../img/promo-compressed.jpg") center bottom no-repeat;
   background-size: cover;
   padding: 200px 0 120px 0;
+
 }
+#hero2 {
+  width: 100%;
+  height: 100vh;
+
+  position: relative;
+  background: url('https://res.cloudinary.com/aniboom-ma/image/upload/v1618884349/Trust_us_with_your_skin_care_12_b063649f-624c-4d37-a763-30f1520765f6_jlfs2h.png') center top no-repeat;
+  background-size: cover;
+  padding: 100px 0 120px 0;
+}
+
+
 
 @media (max-width: 991px) {
   #hero {
+    padding: 140px 0 60px 0;
+  }
+  #hero2 {
     padding: 140px 0 60px 0;
   }
 }
 
 @media (max-width: 574px) {
   #hero {
+    padding: 100px 0 20px 0;
+  }
+  #hero2 {
     padding: 100px 0 20px 0;
   }
 }
@@ -343,8 +364,17 @@ h1, h2, h3, h4, h5, h6 {
   float: right;
 }
 
+#hero2 .hero-img {
+  width: 50%;
+  float: right;
+}
 @media (max-width: 991px) {
   #hero .hero-img {
+    width: 80%;
+    float: none;
+    margin: 0 auto 25px auto;
+  }
+  #hero2 .hero-img {
     width: 80%;
     float: none;
     margin: 0 auto 25px auto;
@@ -355,9 +385,20 @@ h1, h2, h3, h4, h5, h6 {
   width: 50%;
   float: left;
 }
+#hero2 .hero-info {
+  width: 50%;
+  float: right;
+}
+
 
 @media (max-width: 991px) {
   #hero .hero-info {
+    width: 80%;
+    float: none;
+    margin: auto;
+    text-align: center;
+  }
+  #hero2 .hero-info {
     width: 80%;
     float: none;
     margin: auto;
@@ -369,6 +410,9 @@ h1, h2, h3, h4, h5, h6 {
   #hero .hero-info {
     width: 100%;
   }
+  #hero2 .hero-info {
+    width: 100%;
+  }
 }
 
 #hero .hero-info h2 {
@@ -378,13 +422,32 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+#hero2 .hero-info h2 {
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+
 #hero .hero-info h2 span {
   color: #74b5fc;
   text-decoration: underline;
 }
 
+
+#hero2 .hero-info h2 span {
+  color: #74b5fc;
+  text-decoration: underline;
+}
+
+
 @media (max-width: 767px) {
   #hero .hero-info h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+  #hero2 .hero-info h2 {
     font-size: 34px;
     margin-bottom: 30px;
   }
@@ -403,11 +466,31 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+#hero2 .hero-info .btn-get-started, #hero2 .hero-info .btn-services {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 0 20px 20px 0;
+  color: #fff;
+}
+
 #hero .hero-info .btn-get-started {
   background: #007bff;
   border: 2px solid #007bff;
   color: #fff;
 }
+
+#hero2 .hero-info .btn-get-started {
+  background: #007bff;
+  border: 2px solid #007bff;
+  color: #fff;
+}
+
 
 #hero .hero-info .btn-get-started:hover {
   background: none;
@@ -415,11 +498,31 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+
+#hero2 .hero-info .btn-get-started:hover {
+  background: none;
+  border-color: #fff;
+  color: #fff;
+}
+
+
 #hero .hero-info .btn-services {
   border: 2px solid #fff;
 }
 
+#hero2 .hero-info .btn-services {
+  border: 2px solid #fff;
+}
+
+
 #hero .hero-info .btn-services:hover {
+  background: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+
+#hero2 .hero-info .btn-services:hover {
   background: #007bff;
   border-color: #007bff;
   color: #fff;

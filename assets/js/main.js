@@ -105,6 +105,21 @@
     onscroll(document, toggleBacktotop)
   }
 
+  // Slick Hero Carousel
+  $('.wrapper').slick({
+    accessibility: true,
+    adaptiveHeight: false,
+    arrows: true,
+    // dots: true,
+    // autoplay: true,
+    // cssEase: 'ease',
+    // easing: 'linear',
+    lazyLoad: 'ondemand',
+    pauseOnHover: true,
+    useCss: true,
+    zIndex: 1000
+  });
+
   /**
    * Mobile nav toggle
    */
@@ -125,7 +140,7 @@
   }, true)
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scrool with offset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
